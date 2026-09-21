@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para ti 💛</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==============================
+         1. INICIO - LLUVIA
+    =============================== -->
+
+    <section id="inicio" class="pantalla inicio">
+
+        <div class="lluvia" id="lluvia"></div>
+
+        <div class="contenido">
+
+            <div class="corazon-grande">💛</div>
+
+            <h1>Hoy quería darte flores amarillas...</h1>
+
+            <p>
+                pero la lluvia tenía otros planes 🌧️
+            </p>
+
+            <p class="texto-secundario">
+                Así que pensé en hacerte algo diferente...
+            </p>
+
+            <button id="botonSorpresa">
+                Tengo algo para ti 💛
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         2. FLORES
+    =============================== -->
+
+    <section id="flores" class="pantalla flores-pantalla oculto">
+
+        <div class="contenido">
+
+            <div class="rayitos">⚡ 💛 ⚡</div>
+
+            <h2>Para mi persona favorita 💛</h2>
+
+            <p>
+                ¿Por qué darte unas flores que algún día se marchitarán,
+                si puedo hacerte un pequeño lugar donde siempre estén
+                floreciendo?
+            </p>
+
+            <div class="flores-emojis">
+                🌻 🌼 🌻 🌼 🌻
+            </div>
+
+            <button id="botonRazones">
+                Continuar 💛
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         3. CORAZONES
+    =============================== -->
+
+    <section id="razones" class="pantalla razones oculto">
+
+        <div class="contenido">
+
+            <div class="rayitos">✨ 💛 ✨</div>
+
+            <h2>Tengo algunas cositas que decirte...</h2>
+
+            <p>
+                Toca cada corazón para descubrirlas.
+            </p>
+
+            <div class="corazones">
+
+                <button
+                    class="corazon-carta"
+                    data-mensaje="Me encanta compartir mi vida contigo 💛">
+                    💛
+                </button>
+
+                <button
+                    class="corazon-carta"
+                    data-mensaje="Tu sonrisa siempre logra alegrarme el día 🌻">
+                    💛
+                </button>
+
+                <button
+                    class="corazon-carta"
+                    data-mensaje="Amo hasta esos pequeños momentos contigo que parecen simples, porque contigo se vuelven especiales ✨">
+                    💛
+                </button>
+
+                <button
+                    class="corazon-carta"
+                    data-mensaje="Gracias por estar conmigo, por escucharme y por acompañarme incluso en los días difíciles 🥺💛">
+                    💛
+                </button>
+
+                <button
+                    class="corazon-carta"
+                    data-mensaje="Y aunque abrieras mil corazones más, todavía me faltarían lugares para escribir todas las razones por las que te amo 💛">
+                    💛
+                </button>
+
+            </div>
+
+            <div id="mensajeCorazon" class="mensaje-corazon">
+                Elige un corazón 💛
+            </div>
+
+            <button id="botonPikachu" class="boton-escondido">
+                Creo que alguien quiere verte... ⚡
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         4. MINI JUEGO PIKACHU
+    =============================== -->
+
+    <section id="juego" class="pantalla juego oculto">
+
+        <div class="titulo-juego">
+
+            <h2>⚡ ¡Espera! ⚡</h2>
+
+            <p>
+                Parece que alguien tiene algo para ti...
+            </p>
+
+            <h3>¡Atrapa a Pikachu! 💛</h3>
+
+            <p id="contador">
+                Intentos: 0 / 4
+            </p>
+
+        </div>
+
+
+        <div id="zonaJuego" class="zona-juego">
+
+            <img
+                id="pikachuJuego"
+                src="img/pikachu2.png"
+                alt="Pikachu">
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         5. PIKAAAA
+    =============================== -->
+
+    <section id="pika" class="pantalla pika oculto">
+
+        <div class="destello"></div>
+
+        <div class="contenido">
+
+            <img
+                src="img/pikachu2.png"
+                class="pikachu-atrapado"
+                alt="Pikachu">
+
+            <h1 class="pika-texto">
+                ¡PIKAAAAAA! ⚡💛
+            </h1>
+
+            <p>
+                ¡Lo atrapaste! 😂💛
+            </p>
+
+            <p>
+                Pero parece que Pikachu todavía tiene algo que mostrarte...
+            </p>
+
+            <button id="botonFloresPika">
+                Ver su sorpresa 🌻
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         6. PIKACHU CON FLORES
+    =============================== -->
+
+    <section id="pikachuFlores" class="pantalla pikachu-flores oculto">
+
+        <div class="contenido">
+
+            <h2>
+                Parece que Pikachu sí consiguió las flores... 🌻💛
+            </h2>
+
+            <div class="foto-container">
+
+                <img
+                    src="img/pikaflores.jpg"
+                    class="foto-pikachu-flores"
+                    alt="Pikachu con flores">
+
+            </div>
+
+            <p>
+                Las que yo quería darte hoy 💛
+            </p>
+
+            <p class="texto-secundario">
+                Aunque todavía queda una última cosita...
+            </p>
+
+            <button id="botonCarta">
+                ¿Qué quiere decirme? 💌
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         7. CARTA FINAL
+    =============================== -->
+
+    <section id="carta" class="pantalla carta oculto">
+
+        <div id="lluviaFinal"></div>
+
+        <div class="carta-contenido">
+
+            <div class="flor-carta">
+                🌻
+            </div>
+
+            <h2>Para ti 💛</h2>
+
+            <p>
+                Hoy quería darte flores amarillas y hacerte sentir
+                especial de una manera sencilla.
+            </p>
+
+            <p>
+                Al final la lluvia cambió un poquito mis planes,
+                pero también me dio una excusa para hacerte algo
+                diferente.
+            </p>
+
+            <p>
+                Quería recordarte que amo compartir mis días contigo,
+                nuestras risas, nuestros momentos y hasta esas pequeñas
+                cosas que quizá parecen insignificantes, pero que para mí
+                significan muchísimo porque son contigo.
+            </p>
+
+            <p>
+                Gracias por estar en mi vida, por cada momento que hemos
+                compartido y por todos los que todavía nos faltan.
+            </p>
+
+            <p class="final-amor">
+                Puede que hoy no haya llegado con las flores amarillas
+                en mis manos...
+                <br><br>
+                pero espero que este pequeño lugar te recuerde
+                cuánto te amo. 💛
+            </p>
+
+            <div class="ramo-final">
+                🌻 🌻 🌻 🌻 🌻
+            </div>
+
+            <h3>Te amo muchísimo 💛</h3>
+
+            <div class="firma">
+                Con amor, para mi persona favorita ⚡💛
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
