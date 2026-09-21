@@ -5,13 +5,19 @@
 }
 
 html {
+    width: 100%;
+    min-height: 100%;
     scroll-behavior: smooth;
 }
 
 body {
+    width: 100%;
+    min-height: 100%;
     font-family: Arial, Helvetica, sans-serif;
-    overflow: hidden;
     background: #fff8c7;
+
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 button {
@@ -28,6 +34,7 @@ button {
 .pantalla {
     width: 100%;
     min-height: 100vh;
+    min-height: 100dvh;
 
     display: flex;
     justify-content: center;
@@ -36,9 +43,9 @@ button {
     padding: 30px;
 
     text-align: center;
-
     position: relative;
-    overflow: hidden;
+
+    overflow-x: hidden;
 }
 
 .oculto {
@@ -60,20 +67,17 @@ button {
 
 button:not(.corazon-carta) {
     margin-top: 30px;
-
     padding: 16px 32px;
 
     border-radius: 50px;
 
     background: #ffd83d;
-
     color: #4c3b00;
 
     font-size: 18px;
     font-weight: bold;
 
-    box-shadow:
-        0 10px 30px rgba(120, 90, 0, 0.22);
+    box-shadow: 0 10px 30px rgba(120, 90, 0, 0.22);
 
     transition: 0.3s;
 }
@@ -89,13 +93,12 @@ button:not(.corazon-carta):hover {
 ========================= */
 
 .inicio {
-    background:
-        linear-gradient(
-            180deg,
-            #4d6478,
-            #8299aa,
-            #bcc9d2
-        );
+    background: linear-gradient(
+        180deg,
+        #4d6478,
+        #8299aa,
+        #bcc9d2
+    );
 
     color: white;
 }
@@ -117,39 +120,36 @@ button:not(.corazon-carta):hover {
 .corazon-grande {
     font-size: 80px;
     margin-bottom: 20px;
-
     animation: latido 1.5s infinite;
 }
 
 
-/* LLUVIA */
+/* =========================
+   LLUVIA
+========================= */
 
 .lluvia {
     position: absolute;
     inset: 0;
-
     pointer-events: none;
 }
 
 .gota {
     position: absolute;
-
     top: -50px;
 
     width: 2px;
     height: 30px;
 
-    background: rgba(255,255,255,0.5);
+    background: rgba(255, 255, 255, 0.5);
 
     animation: caer linear infinite;
 }
 
 @keyframes caer {
-
     to {
         transform: translateY(115vh);
     }
-
 }
 
 
@@ -158,13 +158,12 @@ button:not(.corazon-carta):hover {
 ========================= */
 
 .flores-pantalla {
-    background:
-        linear-gradient(
-            135deg,
-            #fff9c4,
-            #ffe780,
-            #ffd54f
-        );
+    background: linear-gradient(
+        135deg,
+        #fff9c4,
+        #ffe780,
+        #ffd54f
+    );
 
     color: #665000;
 }
@@ -172,32 +171,25 @@ button:not(.corazon-carta):hover {
 .flores-pantalla h2,
 .razones h2,
 .pikachu-flores h2 {
-
     font-size: clamp(32px, 6vw, 55px);
     margin-bottom: 25px;
 }
 
 .flores-pantalla p,
 .pikachu-flores p {
-
     font-size: clamp(18px, 3vw, 24px);
-
     line-height: 1.6;
 }
 
 .rayitos {
     font-size: 60px;
-
     margin-bottom: 25px;
-
     animation: latido 1.5s infinite;
 }
 
 .flores-emojis {
     font-size: clamp(40px, 7vw, 70px);
-
     margin-top: 35px;
-
     animation: floresEntrada 1.5s ease;
 }
 
@@ -237,7 +229,6 @@ button:not(.corazon-carta):hover {
 }
 
 .corazon-carta {
-
     width: 90px;
     height: 90px;
 
@@ -249,38 +240,27 @@ button:not(.corazon-carta):hover {
 
     font-size: 45px;
 
-    background:
-        rgba(255,255,255,0.6);
+    background: rgba(255, 255, 255, 0.6);
 
-    box-shadow:
-        0 10px 30px
-        rgba(100,70,0,0.15);
+    box-shadow: 0 10px 30px rgba(100, 70, 0, 0.15);
 
     transition: 0.3s;
 }
 
 .corazon-carta:hover {
-
-    transform:
-        translateY(-10px)
-        scale(1.1);
+    transform: translateY(-10px) scale(1.1);
 }
 
 .corazon-carta.abierto {
-
     opacity: 0.45;
-
     transform: scale(0.9);
 }
 
 .mensaje-corazon {
-
     max-width: 650px;
-
     min-height: 110px;
 
     margin: auto;
-
     padding: 25px;
 
     display: flex;
@@ -289,16 +269,12 @@ button:not(.corazon-carta):hover {
 
     border-radius: 25px;
 
-    background:
-        rgba(255,255,255,0.65);
+    background: rgba(255, 255, 255, 0.65);
 
     font-size: 21px;
-
     line-height: 1.5;
 
-    box-shadow:
-        0 15px 40px
-        rgba(100,70,0,0.15);
+    box-shadow: 0 15px 40px rgba(100, 70, 0, 0.15);
 
     transition: opacity 0.25s;
 }
@@ -313,57 +289,49 @@ button:not(.corazon-carta):hover {
 ========================= */
 
 .juego {
-
     display: block;
 
-    background:
-        linear-gradient(
-            180deg,
-            #fffbe5,
-            #ffed8a
-        );
+    background: linear-gradient(
+        180deg,
+        #fffbe5,
+        #ffed8a
+    );
 
     color: #574500;
 
     padding: 0;
+
+    overflow: hidden;
 }
 
 .titulo-juego {
-
     position: absolute;
-
     z-index: 10;
 
     width: 100%;
-
     top: 30px;
 
     pointer-events: none;
 }
 
 .titulo-juego h2 {
-
     font-size: 40px;
 }
 
 .titulo-juego h3 {
-
     font-size: 25px;
-
     margin-top: 10px;
 }
 
 .titulo-juego p {
-
     margin-top: 8px;
-
     font-size: 18px;
 }
 
 .zona-juego {
-
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
 
     position: relative;
 
@@ -371,7 +339,6 @@ button:not(.corazon-carta):hover {
 }
 
 #pikachuJuego {
-
     position: absolute;
 
     width: clamp(110px, 16vw, 210px);
@@ -379,27 +346,17 @@ button:not(.corazon-carta):hover {
     cursor: pointer;
 
     user-select: none;
-
     -webkit-user-drag: none;
 
     transition:
         left 0.35s ease,
-        top 0.35s ease,
-        transform 0.2s;
+        top 0.35s ease;
 
-    animation:
-        pikachuSaltando 0.7s infinite alternate;
+    animation: pikachuSaltando 0.7s infinite alternate;
 
-    filter:
-        drop-shadow(
-            0 12px 10px
-            rgba(0,0,0,0.15)
-        );
-}
-
-#pikachuJuego:hover {
-
-    transform: scale(1.08);
+    filter: drop-shadow(
+        0 12px 10px rgba(0, 0, 0, 0.15)
+    );
 }
 
 
@@ -408,64 +365,63 @@ button:not(.corazon-carta):hover {
 ========================= */
 
 .pika {
-
-    background:
-        radial-gradient(
-            circle,
-            #fffef1,
-            #ffe55b,
-            #ffc400
-        );
+    background: radial-gradient(
+        circle,
+        #fffef1,
+        #ffe55b,
+        #ffc400
+    );
 
     color: #5d4700;
 }
 
 .pikachu-atrapado {
-
     width: min(350px, 70vw);
-
-    animation:
-        celebracion 0.6s infinite alternate;
+    animation: celebracion 0.6s infinite alternate;
 }
 
 .pika-texto {
-
-    font-size:
-        clamp(40px, 8vw, 80px);
-
+    font-size: clamp(40px, 8vw, 80px);
     margin: 15px 0;
 
     animation: pikaTexto 0.5s infinite alternate;
 }
 
 .pika p {
-
     font-size: 21px;
-
     margin: 10px;
 }
 
 
 /* =========================
-   PIKACHU FLORES
+   PIKACHU CON FLORES
 ========================= */
 
 .pikachu-flores {
-
-    background:
-        linear-gradient(
-            135deg,
-            #fffce6,
-            #ffeaa0
-        );
+    background: linear-gradient(
+        135deg,
+        #fffce6,
+        #ffeaa0
+    );
 
     color: #604b00;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    height: auto;
+
+    align-items: flex-start;
+
+    overflow-x: hidden;
+    overflow-y: visible;
+
+    padding-top: 40px;
+    padding-bottom: 70px;
 }
 
 .foto-container {
-
-    margin:
-        30px auto 20px;
+    margin: 30px auto 20px;
 
     max-width: 450px;
 
@@ -475,18 +431,16 @@ button:not(.corazon-carta):hover {
 
     border-radius: 30px;
 
-    box-shadow:
-        0 20px 60px
-        rgba(100,70,0,0.18);
+    box-shadow: 0 20px 60px rgba(100, 70, 0, 0.18);
 
     transform: rotate(-2deg);
 }
 
 .foto-pikachu-flores {
-
     display: block;
 
     width: 100%;
+    height: auto;
 
     border-radius: 20px;
 }
@@ -497,121 +451,112 @@ button:not(.corazon-carta):hover {
 ========================= */
 
 .carta {
+    background: linear-gradient(
+        135deg,
+        #fffbe8,
+        #ffe985,
+        #ffd54f
+    );
 
-    background:
-        linear-gradient(
-            135deg,
-            #fffbe8,
-            #ffe985,
-            #ffd54f
-        );
+    min-height: 100vh;
+    min-height: 100dvh;
 
-    overflow-y: auto;
+    height: auto;
 
     align-items: flex-start;
+
+    overflow-x: hidden;
+    overflow-y: visible;
+
+    padding: 30px 20px 100px;
 }
 
 .carta-contenido {
-
     position: relative;
     z-index: 10;
 
     width: min(700px, 95%);
 
-    margin:
-        60px auto;
+    margin: 30px auto;
 
-    padding:
-        45px;
+    padding: 45px;
 
-    background:
-        rgba(255,255,255,0.88);
+    background: rgba(255, 255, 255, 0.88);
 
     border-radius: 35px;
 
-    box-shadow:
-        0 25px 70px
-        rgba(100,70,0,0.2);
+    box-shadow: 0 25px 70px rgba(100, 70, 0, 0.2);
 
     color: #604b00;
 }
 
 .carta-contenido h2 {
-
-    font-size:
-        clamp(38px, 7vw, 60px);
-
+    font-size: clamp(38px, 7vw, 60px);
     margin-bottom: 30px;
 }
 
 .carta-contenido p {
-
     font-size: 19px;
-
     line-height: 1.8;
-
     margin-bottom: 20px;
 }
 
 .flor-carta {
-
     font-size: 70px;
-
     animation: latido 1.5s infinite;
 }
 
 .final-amor {
-
     font-weight: bold;
 }
 
 .ramo-final {
-
     margin: 30px 0;
-
-    font-size:
-        clamp(35px, 7vw, 60px);
+    font-size: clamp(35px, 7vw, 60px);
 }
 
 .carta h3 {
-
     font-size: 30px;
-
     margin-bottom: 20px;
 }
 
 .firma {
-
     font-style: italic;
-
     opacity: 0.8;
 }
 
 
-/* LLUVIA FINAL */
+/* =========================
+   LLUVIA FINAL
+========================= */
 
-.elemento-final {
-
+#lluviaFinal {
     position: fixed;
-
-    top: -70px;
-
-    z-index: 5;
+    inset: 0;
 
     pointer-events: none;
 
-    animation:
-        caerFinal linear forwards;
+    overflow: hidden;
+
+    z-index: 2;
+}
+
+.elemento-final {
+    position: absolute;
+
+    top: -70px;
+
+    pointer-events: none;
+
+    animation: caerFinal linear forwards;
 }
 
 @keyframes caerFinal {
-
     to {
         transform:
-            translateY(115vh)
+            translateY(120vh)
             rotate(360deg);
     }
-
 }
 
 
@@ -620,7 +565,6 @@ button:not(.corazon-carta):hover {
 ========================= */
 
 @keyframes latido {
-
     0%,
     100% {
         transform: scale(1);
@@ -629,69 +573,41 @@ button:not(.corazon-carta):hover {
     50% {
         transform: scale(1.18);
     }
-
 }
 
 @keyframes floresEntrada {
-
     from {
-
         opacity: 0;
-
-        transform:
-            translateY(50px)
-            scale(0.7);
+        transform: translateY(50px) scale(0.7);
     }
 
     to {
-
         opacity: 1;
-
-        transform:
-            translateY(0)
-            scale(1);
+        transform: translateY(0) scale(1);
     }
-
 }
 
 @keyframes pikachuSaltando {
-
     from {
-
-        transform:
-            translateY(0)
-            rotate(-3deg);
+        transform: translateY(0) rotate(-3deg);
     }
 
     to {
-
-        transform:
-            translateY(-25px)
-            rotate(3deg);
+        transform: translateY(-25px) rotate(3deg);
     }
-
 }
 
 @keyframes celebracion {
-
     from {
-
-        transform:
-            translateY(0)
-            rotate(-5deg);
+        transform: translateY(0) rotate(-5deg);
     }
 
     to {
-
-        transform:
-            translateY(-15px)
-            rotate(5deg);
+        transform: translateY(-15px) rotate(5deg);
     }
-
 }
 
 @keyframes pikaTexto {
-
     from {
         transform: scale(1);
     }
@@ -699,7 +615,6 @@ button:not(.corazon-carta):hover {
     to {
         transform: scale(1.08);
     }
-
 }
 
 
@@ -713,8 +628,15 @@ button:not(.corazon-carta):hover {
         padding: 20px;
     }
 
-    .corazon-carta {
+    .inicio h1 {
+        font-size: 38px;
+    }
 
+    .corazon-grande {
+        font-size: 65px;
+    }
+
+    .corazon-carta {
         width: 65px;
         height: 65px;
 
@@ -722,25 +644,60 @@ button:not(.corazon-carta):hover {
     }
 
     .mensaje-corazon {
-
         font-size: 17px;
-    }
-
-    .carta-contenido {
-
-        padding:
-            30px 20px;
-
-        margin:
-            30px auto;
+        padding: 20px;
     }
 
     .titulo-juego {
-
         top: 20px;
-
-        padding:
-            0 20px;
+        padding: 0 15px;
     }
 
+    .titulo-juego h2 {
+        font-size: 30px;
+    }
+
+    .pikachu-flores {
+        padding: 30px 15px 70px;
+    }
+
+    .pikachu-flores .contenido {
+        width: 100%;
+    }
+
+    .foto-container {
+        width: min(90%, 400px);
+        margin-top: 25px;
+    }
+
+    .carta {
+        padding: 20px 12px 80px;
+    }
+
+    .carta-contenido {
+        width: 100%;
+
+        margin: 15px auto;
+
+        padding: 30px 20px;
+
+        border-radius: 25px;
+    }
+
+    .carta-contenido h2 {
+        font-size: 36px;
+    }
+
+    .carta-contenido p {
+        font-size: 17px;
+        line-height: 1.65;
+    }
+
+    .flor-carta {
+        font-size: 55px;
+    }
+
+    .carta h3 {
+        font-size: 25px;
+    }
 }
